@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piorate Ventures — AI Automation for Real Estate</title>
+  <link rel="icon" href="../../assets/logo-mark-white.png">
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <style>
+    /* ===========================================================
+       Piorate Ventures — Refined Light Theme
+       Off-white canvas · ink navy text · rich electric blue accent
+       =========================================================== */
+    :root {
+      --bg-0: #FBFAF7;          /* warm off-white canvas */
+      --bg-1: #F4F2EC;           /* paper / muted */
+      --bg-2: #FFFFFF;           /* card surface */
+      --bg-3: #EDEAE3;           /* hover */
+      --bg-ink: #0A1023;         /* dark hero panel */
+      --bg-ink-2: #131A33;       /* dark hero gradient stop */
+
+      --line-1: #E6E2D8;         /* hairline */
+      --line-2: #D2CDC1;         /* stronger */
+      --line-ink: #1F2944;       /* hairline on dark panels */
+
+      --fg-0: #0A1023;           /* ink — display */
+      --fg-1: #3A4257;           /* body */
+      --fg-2: #6B7488;           /* meta */
+      --fg-on-ink-0: #F7F4ED;    /* on dark */
+      --fg-on-ink-1: #B8BFD0;
+      --fg-on-ink-2: #6F7A95;
+
+      --accent: #1F47F5;         /* rich electric blue */
+      --accent-hi: #4F70FF;
+      --accent-soft: rgba(31,71,245,0.08);
+      --accent-glow: rgba(31,71,245,0.25);
+      --gold: #C8A35B;           /* luxury accent — used very sparingly */
+      --ok: #1F9F6E;
+
+      --shadow-card: 0 1px 0 rgba(255,255,255,0.7) inset, 0 14px 32px -16px rgba(10,16,35,0.12);
+      --shadow-deep: 0 60px 120px -40px rgba(10,16,35,0.25);
+      --shadow-ink:  0 30px 60px -20px rgba(10,16,35,0.45);
+      --shadow-glow: 0 0 0 1px rgba(31,71,245,0.25), 0 8px 28px -8px rgba(31,71,245,0.4);
+    }
+
+    html, body { margin: 0; background: var(--bg-0); }
+    body { color: var(--fg-1); font-family: var(--font-body); }
+    *, *::before, *::after { box-sizing: border-box; }
+    a { cursor: pointer; }
+    button { font-family: inherit; }
+    section { position: relative; }
+    html, body { max-width: 100vw; overflow-x: hidden; }
+
+    ::selection { background: rgba(31,71,245,0.18); color: var(--fg-0); }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--bg-0); }
+    ::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 5px; }
+
+    /* -- typography corrections -- */
+    h1, h2, h3, h4, .display { color: var(--fg-0) !important; letter-spacing: -0.025em; }
+    p, li, label { color: var(--fg-1); }
+    .lead { color: var(--fg-1) !important; }
+    .eyebrow, [class*="eyebrow"] { color: var(--accent) !important; }
+
+    /* -- Header: white frosted bar, ink wordmark -- */
+    header {
+      background: rgba(251,250,247,0.8) !important;
+      border-bottom: 1px solid var(--line-1) !important;
+    }
+    header a { color: var(--fg-1) !important; }
+    header a:hover { color: var(--fg-0) !important; }
+
+    /* -- Cards: white, soft shadow, hairline -- */
+    main div[style*="rgba(16,23,42,0.55)"],
+    main div[style*="rgba(16,23,42,0.6)"],
+    main div[style*="rgba(16,23,42,0.92)"],
+    main div[style*="rgba(26,34,56,0.7)"],
+    main div[style*="rgba(26,34,56,0.8)"],
+    main div[style*="linear-gradient(180deg, rgba(26,34,56"] {
+      background: var(--bg-2) !important;
+      border-color: var(--line-1) !important;
+      box-shadow: var(--shadow-card) !important;
+      backdrop-filter: none !important;
+    }
+    main div[style*="rgba(5,7,13,0.4)"],
+    main div[style*="rgba(16,23,42,0.4)"] {
+      background: var(--bg-1) !important;
+      border-color: var(--line-1) !important;
+    }
+
+    /* Hero "live lead" + "metrics" cards — keep DARK on light hero (premium duotone) */
+    main div[style*="top: -30"][style*="right: -40"],
+    main div[style*="bottom: -40"][style*="left: -50"] {
+      background: linear-gradient(180deg, var(--bg-ink-2), var(--bg-ink)) !important;
+      border-color: var(--line-ink) !important;
+      box-shadow: var(--shadow-ink) !important;
+      color: var(--fg-on-ink-0) !important;
+    }
+    main div[style*="top: -30"][style*="right: -40"] *,
+    main div[style*="bottom: -40"][style*="left: -50"] * {
+      color: inherit !important;
+    }
+    main div[style*="top: -30"] [class],
+    main div[style*="bottom: -40"] [class] { color: inherit; }
+    main div[style*="top: -30"] div[style*="font-weight: 600"][style*="color: var(--fg-0)"],
+    main div[style*="bottom: -40"] div[style*="font-weight: 700"][style*="color: var(--fg-0)"] {
+      color: var(--fg-on-ink-0) !important;
+    }
+    main div[style*="top: -30"] div[style*="background: var(--bg-3)"] {
+      background: rgba(255,255,255,0.06) !important;
+      border-color: var(--line-ink) !important;
+      color: var(--fg-on-ink-0) !important;
+    }
+
+    /* Dashboard frame — KEEP DARK as the centerpiece (Stripe-style duotone hero) */
+    main div[style*="linear-gradient(180deg, #0F1628"] {
+      background: linear-gradient(180deg, #0F1628, #0A1023) !important;
+      border: 1px solid var(--line-ink) !important;
+      box-shadow: var(--shadow-ink) !important;
+    }
+    main div[style*="linear-gradient(180deg, #0F1628"] * { color: inherit; }
+    main div[style*="linear-gradient(180deg, #0F1628"] div[style*="rgba(16,23,42,0.6)"] {
+      background: rgba(255,255,255,0.04) !important;
+      border-color: var(--line-ink) !important;
+      box-shadow: none !important;
+    }
+    main div[style*="linear-gradient(180deg, #0F1628"] div[style*="rgba(16,23,42,0.4)"] {
+      background: rgba(255,255,255,0.03) !important;
+    }
+    main div[style*="linear-gradient(180deg, #0F1628"] div[style*="font-family: var(--font-display)"][style*="color: var(--fg-0)"] {
+      color: var(--fg-on-ink-0) !important;
+    }
+
+    /* Icon tiles: light gradient tile with accent glyph */
+    main div[style*="linear-gradient(140deg, #1A2238, #0A0E1A)"] {
+      background: linear-gradient(140deg, var(--bg-1), var(--bg-2)) !important;
+      border-color: var(--line-1) !important;
+      color: var(--accent) !important;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 1px 2px rgba(10,16,35,0.04) !important;
+    }
+    /* Step number tile */
+    main div[style*="linear-gradient(140deg, #1A2238, #0A0E1A)"][style*="border-radius: 14"] {
+      background: var(--accent) !important;
+      color: #FFFFFF !important;
+      border-color: transparent !important;
+      box-shadow: 0 8px 20px -6px rgba(31,71,245,0.45) !important;
+    }
+    main div[style*="linear-gradient(140deg, #2A3550, #10172A)"] {
+      background: linear-gradient(140deg, var(--bg-1), var(--bg-2)) !important;
+      border-color: var(--line-1) !important;
+      color: var(--fg-0) !important;
+    }
+
+    /* Inputs: white surface */
+    input, select, textarea {
+      background: #FFFFFF !important;
+      border: 1px solid var(--line-1) !important;
+      color: var(--fg-0) !important;
+      box-shadow: 0 1px 2px rgba(10,16,35,0.03) !important;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent) !important;
+      box-shadow: 0 0 0 4px rgba(31,71,245,0.12) !important;
+    }
+    input::placeholder, textarea::placeholder { color: var(--fg-2) !important; }
+
+    /* Buttons -- primary: confident ink, secondary: white outline */
+    button[style*="linear-gradient(180deg, #6BEFFF"] {
+      background: var(--fg-0) !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 8px 22px -8px rgba(10,16,35,0.45), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+      border: 1px solid var(--fg-0) !important;
+    }
+    button[style*="linear-gradient(180deg, #6BEFFF"]:hover {
+      background: #1A2238 !important;
+    }
+    button[style*="rgba(16,23,42,0.6)"] {
+      background: #FFFFFF !important;
+      color: var(--fg-0) !important;
+      box-shadow: inset 0 0 0 1px var(--line-2), 0 1px 2px rgba(10,16,35,0.04) !important;
+      backdrop-filter: none !important;
+    }
+
+    /* Top-of-hero pill */
+    div[style*="rgba(16,23,42,0.6)"][style*="border-radius: 999"] {
+      background: #FFFFFF !important;
+      box-shadow: inset 0 0 0 1px var(--line-1), 0 1px 2px rgba(10,16,35,0.04) !important;
+    }
+    div[style*="rgba(16,23,42,0.6)"][style*="border-radius: 999"] * { color: var(--fg-0) !important; }
+    div[style*="rgba(16,23,42,0.6)"][style*="border-radius: 999"] span[style*="rgba(94,231,255,0.12)"] {
+      background: var(--accent-soft) !important;
+    }
+    div[style*="rgba(16,23,42,0.6)"][style*="border-radius: 999"] span[style*="background: var(--accent)"] {
+      background: var(--accent) !important;
+      box-shadow: 0 0 8px var(--accent) !important;
+    }
+
+    /* Hero gradient headline — confident blue → ink */
+    span[style*="linear-gradient(135deg, #EAF1FF"] {
+      background: linear-gradient(135deg, var(--fg-0) 0%, var(--accent) 100%) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      color: transparent !important;
+    }
+
+    /* Trust strip dots */
+    span[style*="line-2"] { color: var(--line-2) !important; }
+
+    /* Background grid + spotlights — adjust for light theme */
+    div[style*="rgba(94,231,255,0.05)"],
+    div[style*="rgba(94,231,255,0.06)"][style*="48px 48px"],
+    div[style*="rgba(94,231,255,0.08)"][style*="48px 48px"] {
+      background-image:
+        linear-gradient(rgba(31,71,245,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31,71,245,0.06) 1px, transparent 1px) !important;
+    }
+    div[style*="radial-gradient(circle, rgba(94,231,255"] {
+      background: radial-gradient(circle, rgba(31,71,245,0.08), transparent 60%) !important;
+    }
+    div[style*="radial-gradient(circle, rgba(122,160,255"] {
+      background: radial-gradient(circle, rgba(31,71,245,0.05), transparent 60%) !important;
+    }
+
+    /* Service cards' top radial wash */
+    main div[style*="radial-gradient(120% 60% at 0% 0%, rgba(94,231,255,0.07)"],
+    main div[style*="radial-gradient(120% 60% at 0% 0%, rgba(94,231,255,0.08)"] {
+      background: radial-gradient(120% 60% at 0% 0%, var(--accent-soft), transparent 50%) !important;
+    }
+
+    /* Glass card top-edge shimmer (the linear gradient line) — accent on light */
+    span[style*="linear-gradient(90deg, transparent, rgba(94,231,255,0.4)"],
+    span[style*="linear-gradient(90deg, transparent, rgba(94,231,255,0.5)"],
+    span[style*="linear-gradient(90deg, transparent, rgba(94,231,255,0.25)"] {
+      background: linear-gradient(90deg, transparent, var(--accent), transparent) !important;
+      opacity: 0.4;
+    }
+
+    /* Outcome dashed border */
+    [style*="border-top: 1px dashed"] { border-top-color: var(--line-2) !important; }
+
+    /* Footer */
+    footer {
+      background: var(--bg-1) !important;
+      border-top: 1px solid var(--line-1) !important;
+    }
+    footer a { color: var(--fg-1) !important; }
+    footer a:hover { color: var(--fg-0) !important; }
+
+    /* Final CTA banner — INK panel, the visual hero of the page bottom */
+    main section[id="contact"] div[style*="rgba(26,34,56,0.8)"] {
+      background: linear-gradient(180deg, var(--bg-ink-2), var(--bg-ink)) !important;
+      border: 1px solid var(--line-ink) !important;
+      box-shadow: var(--shadow-ink) !important;
+    }
+    main section[id="contact"] div[style*="rgba(26,34,56,0.8)"] h2,
+    main section[id="contact"] div[style*="rgba(26,34,56,0.8)"] p,
+    main section[id="contact"] div[style*="rgba(26,34,56,0.8)"] .lead,
+    main section[id="contact"] div[style*="rgba(26,34,56,0.8)"] .eyebrow {
+      color: var(--fg-on-ink-0) !important;
+    }
+    main section[id="contact"] div[style*="rgba(26,34,56,0.8)"] .lead { color: var(--fg-on-ink-1) !important; }
+
+    /* Final CTA primary button — invert to white-on-dark */
+    main section[id="contact"] div[style*="rgba(26,34,56,0.8)"] button[style*="linear-gradient(180deg, #6BEFFF"] {
+      background: #FFFFFF !important;
+      color: var(--fg-0) !important;
+      border-color: #FFFFFF !important;
+      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.4) !important;
+    }
+
+    /* Results — Before / After columns */
+    main div[style*="rgba(255,180,84,0.04)"],
+    main div[style*="rgba(255,180,84,0.03)"] {
+      background: var(--bg-1) !important;
+      border-color: var(--line-1) !important;
+    }
+    main div[style*="rgba(94,231,255,0.06)"][style*="rgba(16,23,42,0.4)"],
+    main div[style*="linear-gradient(180deg, rgba(94,231,255"] {
+      background: linear-gradient(180deg, #FFFFFF, var(--accent-soft)) !important;
+      border: 1px solid var(--accent) !important;
+      box-shadow: 0 0 0 4px rgba(31,71,245,0.06), var(--shadow-card) !important;
+    }
+
+    /* Badge "live" — green works on light */
+    span[style*="rgba(61,220,151,0.08)"] {
+      background: rgba(31,159,110,0.1) !important;
+      color: var(--ok) !important;
+      box-shadow: inset 0 0 0 1px rgba(31,159,110,0.3) !important;
+    }
+    span[style*="rgba(94,231,255,0.08)"] {
+      background: var(--accent-soft) !important;
+      color: var(--accent) !important;
+      box-shadow: inset 0 0 0 1px rgba(31,71,245,0.25) !important;
+    }
+    span[style*="rgba(58,73,108,0.2)"] {
+      background: var(--bg-1) !important;
+      color: var(--fg-1) !important;
+      box-shadow: inset 0 0 0 1px var(--line-1) !important;
+    }
+
+    /* Dashed step connector */
+    div[style*="repeating-linear-gradient(90deg, var(--line-2)"] {
+      background: repeating-linear-gradient(90deg, var(--line-2) 0 6px, transparent 6px 12px) !important;
+    }
+
+    /* Live dot (cyan) → accent blue */
+    span[style*="background: var(--accent)"][style*="boxShadow"] {
+      background: var(--accent) !important;
+    }
+
+    /* Chat bubbles inside live-lead card (dark panel) — keep on dark */
+    main div[style*="top: -30"] div[style*="rgba(94,231,255,0.06)"][style*="rgba(94,231,255,0.18)"] {
+      background: rgba(31,71,245,0.18) !important;
+      border-color: rgba(79,112,255,0.4) !important;
+      color: var(--fg-on-ink-0) !important;
+    }
+
+    /* Dashboard cards — pipeline tiles */
+    main div[style*="linear-gradient(180deg, #0F1628"] div[style*="rgba(94,231,255,0.25)"] {
+      border-color: rgba(79,112,255,0.5) !important;
+    }
+    main div[style*="linear-gradient(180deg, #0F1628"] div[style*="font-family: var(--font-display)"][style*="fontSize: 28"] {
+      color: var(--fg-on-ink-0) !important;
+    }
+
+    /* Disable animations below hero section */
+    main * {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    /* Spotlight animations off */
+    main div[data-pv="spotlight"] {
+      opacity: 0.3 !important;
+      animation: none !important;
+    }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="dist/Primitives.js?v=20260511"></script>
+  <script src="dist/Header.js?v=20260511"></script>
+  <script src="dist/Hero.js?v=20260511"></script>
+  <script src="dist/Services.js?v=20260511"></script>
+  <script src="dist/WhyUs.js?v=20260511"></script>
+  <script src="dist/HowItWorks.js?v=20260511"></script>
+  <script src="dist/Results.js?v=20260511"></script>
+  <script src="dist/Testimonials.js?v=20260511"></script>
+  <script src="dist/CTASection.js?v=20260511"></script>
+  <script src="dist/Footer.js?v=20260511"></script>
+  <script src="dist/App.js?v=20260511"></script>
+</body>
+</html>

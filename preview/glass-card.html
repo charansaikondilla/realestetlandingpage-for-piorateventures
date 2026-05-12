@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-0); }
+  body { padding: 24px; font-family: var(--font-body); }
+  .glass {
+    background: rgba(16,23,42,0.55);
+    backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid var(--line-1);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: var(--shadow-card);
+    position: relative; overflow: hidden;
+    max-width: 380px;
+  }
+  .glass::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(94,231,255,0.5), transparent);
+  }
+  .hd { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .av { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(140deg, #2A3550, #10172A); border: 1px solid var(--line-1); display: grid; place-items: center; color: var(--accent); }
+  .who { font-size: 13px; color: var(--fg-0); font-weight: 600; }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.14em; }
+  .live { margin-left: auto; display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10px; color: #5BE5AC; text-transform: uppercase; letter-spacing: 0.14em; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #5BE5AC; box-shadow: 0 0 10px #5BE5AC; }
+  .msg { background: rgba(94,231,255,0.06); border: 1px solid rgba(94,231,255,0.18); border-radius: 12px; padding: 10px 12px; color: var(--fg-0); font-size: 13px; line-height: 1.5; margin-bottom: 8px; }
+  .msg.user { background: var(--bg-3); border-color: var(--line-1); }
+  .stamp { font-family: var(--font-mono); font-size: 9px; color: var(--fg-2); margin-left: 8px; letter-spacing: 0.1em; }
+</style>
+</head>
+<body>
+  <div class="glass">
+    <div class="hd">
+      <div class="av">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </div>
+      <div>
+        <div class="who">AI Voice Closer</div>
+        <div class="meta">Lead · M. Rivera</div>
+      </div>
+      <div class="live"><span class="dot"></span>Live</div>
+    </div>
+    <div class="msg">Hi M., I saw you inquired about the Marina Bay listing. Are you still looking for a 3-bed in that area?<span class="stamp">12:04</span></div>
+    <div class="msg user">Yes, looking to view this weekend.<span class="stamp">12:04</span></div>
+    <div class="msg">Booked you in for Saturday at 11:00. Confirmation sent to your phone.<span class="stamp">12:05</span></div>
+  </div>
+</body>
+</html>

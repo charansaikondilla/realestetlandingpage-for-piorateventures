@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-1); }
+  body { padding: 28px; font-family: var(--font-body); color: var(--fg-1); }
+  .row { display: flex; gap: 18px; align-items: center; }
+  .row + .row { margin-top: 18px; }
+  .lbl-col { width: 110px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--fg-2); }
+  .px { font-family: var(--font-mono); font-size: 11px; color: var(--fg-1); }
+  .display-spec { font-family: var(--font-display); font-weight: 700; color: var(--fg-0); letter-spacing: -0.02em; line-height: 1; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="lbl-col"><div class="lbl">Display</div><div class="px">88 / 700 / -2%</div></div>
+  <div class="display-spec" style="font-size: 64px;">Close more deals.</div>
+</div>
+<div class="row">
+  <div class="lbl-col"><div class="lbl">H1</div><div class="px">56 / 700 / -2%</div></div>
+  <div class="display-spec" style="font-size: 44px;">Built for real estate</div>
+</div>
+<div class="row">
+  <div class="lbl-col"><div class="lbl">H2</div><div class="px">40 / 700</div></div>
+  <div class="display-spec" style="font-size: 32px;">Simple. Fast. Automated.</div>
+</div>
+<div class="row">
+  <div class="lbl-col"><div class="lbl">H3</div><div class="px">24 / 600</div></div>
+  <div style="font-family: var(--font-display); font-size: 22px; color: var(--fg-0); font-weight: 600;">AI Voice Closers™</div>
+</div>
+</body>
+</html>

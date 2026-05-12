@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-1); }
+  body { padding: 28px; color: var(--fg-1); font-family: var(--font-body); }
+  .row { display: flex; align-items: center; gap: 32px; }
+  .mark {
+    width: 132px; height: 132px;
+    background: radial-gradient(circle at 30% 30%, #11192d 0%, #05070D 70%);
+    border: 1px solid var(--line-1);
+    border-radius: var(--r-lg);
+    display: grid; place-items: center;
+    box-shadow: var(--shadow-card);
+  }
+  .mark img { width: 92px; height: auto; }
+  .meta { display: flex; flex-direction: column; gap: 10px; }
+  .name { font-family: var(--font-display); font-size: 32px; color: var(--fg-0); letter-spacing: -0.02em; font-weight: 700; line-height: 1; }
+  .tag { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); }
+  .desc { font-size: 14px; color: var(--fg-2); max-width: 420px; line-height: 1.45; }
+  .swatches { display: flex; gap: 6px; margin-top: 4px; }
+  .sw { width: 28px; height: 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.06); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="mark"><img src="../assets/logo-mark-white.png" alt="Piorate Ventures"></div>
+    <div class="meta">
+      <div class="tag">Brand · Wordmark</div>
+      <div class="name">Piorate Ventures</div>
+      <div class="desc">Shield mark with interlocking P/V letterforms threaded through a circuit pattern. Use the silver/platinum variant on dark surfaces.</div>
+      <div class="swatches">
+        <div class="sw" style="background:#05070D"></div>
+        <div class="sw" style="background:#10172A"></div>
+        <div class="sw" style="background:#3D4D70"></div>
+        <div class="sw" style="background:#B8C4DB"></div>
+        <div class="sw" style="background:#5EE7FF"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

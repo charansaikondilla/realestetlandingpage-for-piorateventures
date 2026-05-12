@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colors — Accent & semantic</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg-1); }
+  body { padding: 24px; color: var(--fg-1); font-family: var(--font-body); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .sw { border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line-1); background: #0A0E1A; }
+  .chip { height: 96px; display: grid; place-items: center; position: relative; }
+  .lbl { padding: 10px 12px; border-top: 1px solid var(--line-1); }
+  .name { font-family: var(--font-mono); font-size: 11px; color: var(--fg-0); letter-spacing: 0.06em; text-transform: uppercase; }
+  .hex { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); margin-top: 4px; }
+  .head { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 14px; }
+  .dot { width: 36px; height: 36px; border-radius: 50%; }
+  .glow { box-shadow: 0 0 0 6px rgba(94,231,255,0.15), 0 0 40px rgba(94,231,255,0.5); }
+</style>
+</head>
+<body>
+  <div class="head">Accent & Semantic</div>
+  <div class="grid">
+    <div class="sw"><div class="chip"><div class="dot glow" style="background:#5EE7FF"></div></div><div class="lbl"><div class="name">accent</div><div class="hex">#5EE7FF</div></div></div>
+    <div class="sw"><div class="chip"><div class="dot" style="background:#7AA0FF"></div></div><div class="lbl"><div class="name">accent-2</div><div class="hex">#7AA0FF</div></div></div>
+    <div class="sw"><div class="chip"><div class="dot" style="background:#3DDC97"></div></div><div class="lbl"><div class="name">ok</div><div class="hex">#3DDC97</div></div></div>
+    <div class="sw"><div class="chip"><div class="dot" style="background:#FFB454"></div></div><div class="lbl"><div class="name">warn</div><div class="hex">#FFB454</div></div></div>
+  </div>
+</body>
+</html>

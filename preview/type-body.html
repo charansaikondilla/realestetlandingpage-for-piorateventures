@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-1); }
+  body { padding: 28px; font-family: var(--font-body); color: var(--fg-1); }
+  .grid { display: grid; grid-template-columns: 130px 1fr; gap: 14px 24px; align-items: baseline; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--fg-2); }
+  .px { font-family: var(--font-mono); font-size: 11px; color: var(--fg-1); margin-top: 2px; }
+  .body-lg { font-size: 18px; color: var(--fg-1); line-height: 1.5; }
+  .body { font-size: 16px; color: var(--fg-1); line-height: 1.55; }
+  .cap { font-size: 13px; color: var(--fg-2); }
+  .eyebrow { font-family: var(--font-mono); font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.16em; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div><div class="lbl">Body L</div><div class="px">18 / 1.5</div></div>
+  <div class="body-lg">Piorate Ventures builds premium AI automation systems for real estate businesses.</div>
+
+  <div><div class="lbl">Body</div><div class="px">16 / 1.55</div></div>
+  <div class="body">Helping you capture more leads, automate follow-ups, generate content instantly, and close deals faster.</div>
+
+  <div><div class="lbl">Caption</div><div class="px">13 / 1.45</div></div>
+  <div class="cap">Average response time across automated channels, last 30 days.</div>
+
+  <div><div class="lbl">Eyebrow</div><div class="px">12 / mono / 0.16em</div></div>
+  <div class="eyebrow">Why Piorate</div>
+</div>
+</body>
+</html>

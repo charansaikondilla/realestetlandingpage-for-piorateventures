@@ -1,0 +1,11 @@
+{
+  "name": "design-system",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "scripts": {
+    "build:landing": "node ui_kits/landing/build.mjs"
+  }
+}

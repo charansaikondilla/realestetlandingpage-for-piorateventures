@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-0); }
+  body { padding: 24px; font-family: var(--font-body); }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px; padding: 0 28px;
+    background: rgba(5,7,13,0.6);
+    backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--line-1);
+    border-radius: 18px;
+    box-shadow: var(--shadow-card);
+  }
+  .left { display: flex; align-items: center; gap: 36px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--fg-0); font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
+  .brand img { width: 24px; height: 24px; }
+  .links { display: flex; gap: 24px; }
+  .links a { color: var(--fg-1); font-size: 14px; }
+  .links a.active { color: var(--fg-0); }
+  .right { display: flex; align-items: center; gap: 12px; }
+  .btn {
+    height: 38px; padding: 0 16px; border-radius: 8px;
+    font-family: var(--font-body); font-weight: 600; font-size: 13px;
+    border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+  }
+  .ghost { background: transparent; color: var(--fg-1); }
+  .primary {
+    background: linear-gradient(180deg, #6BEFFF, #2EB8D9); color: #02121A;
+    box-shadow: 0 0 0 1px rgba(94,231,255,0.4), inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+  <div class="nav">
+    <div class="left">
+      <div class="brand">
+        <img src="../assets/logo-mark-white.png" alt="">
+        Piorate Ventures
+      </div>
+      <div class="links">
+        <a class="active">Home</a><a>Services</a><a>Results</a><a>About</a>
+      </div>
+    </div>
+    <div class="right">
+      <button class="btn ghost">Sign in</button>
+      <button class="btn primary">Book a Call →</button>
+    </div>
+  </div>
+</body>
+</html>

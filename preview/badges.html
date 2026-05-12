@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-0); }
+  body { padding: 28px; font-family: var(--font-body); display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 30px; padding: 0 12px;
+    border-radius: 999px;
+    font-family: var(--font-mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.14em;
+  }
+  .live {
+    background: rgba(61,220,151,0.08); color: #5BE5AC;
+    box-shadow: inset 0 0 0 1px rgba(61,220,151,0.3);
+  }
+  .accent {
+    background: rgba(94,231,255,0.08); color: var(--accent);
+    box-shadow: inset 0 0 0 1px rgba(94,231,255,0.3);
+  }
+  .neutral {
+    background: rgba(58,73,108,0.2); color: var(--fg-1);
+    box-shadow: inset 0 0 0 1px var(--line-1);
+  }
+  .warn {
+    background: rgba(255,180,84,0.08); color: var(--warn);
+    box-shadow: inset 0 0 0 1px rgba(255,180,84,0.3);
+  }
+  .pulse {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor; box-shadow: 0 0 8px currentColor;
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes pulse { 50% { opacity: 0.4; transform: scale(0.8); } }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 36px; padding: 0 14px;
+    border-radius: 8px;
+    background: rgba(16,23,42,0.6); color: var(--fg-1);
+    box-shadow: inset 0 0 0 1px var(--line-1);
+    font-size: 13px;
+  }
+  .chip svg { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="badge live"><span class="pulse"></span>AI Active</div>
+  <div class="badge accent">24/7 · Live</div>
+  <div class="badge neutral">v2.4.1</div>
+  <div class="badge warn">Manual</div>
+  <div class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Faster Lead Conversion</div>
+  <div class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Built for Real Estate</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-1); position: relative; overflow: hidden; }
+  body { padding: 28px; font-family: var(--font-body); color: var(--fg-1); position: relative; }
+  /* Circuit grid background */
+  .bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(94,231,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(94,231,255,0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at 30% 50%, black 30%, transparent 70%);
+  }
+  .spot {
+    position: absolute; width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(94,231,255,0.18), transparent 60%);
+    filter: blur(40px);
+    top: -100px; right: -80px; pointer-events: none;
+  }
+  .content { position: relative; }
+  h2 { font-family: var(--font-display); color: var(--fg-0); font-size: 26px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 8px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 10px; }
+  .tag { color: var(--fg-2); font-size: 13px; }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="spot"></div>
+  <div class="content">
+    <div class="eyebrow">// Background system</div>
+    <h2>Circuit grid + radial spotlight</h2>
+    <div class="tag">48px hairline grid · 8% opacity · cyan radial behind hero focal points · masked edges</div>
+  </div>
+</body>
+</html>

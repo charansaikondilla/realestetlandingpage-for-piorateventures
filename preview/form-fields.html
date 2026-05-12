@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-0); }
+  body { padding: 28px; font-family: var(--font-body); display: flex; flex-direction: column; gap: 14px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--fg-2); }
+  .input {
+    height: 48px; padding: 0 16px;
+    background: rgba(16,23,42,0.5);
+    border: 1px solid var(--line-1);
+    border-radius: 10px;
+    color: var(--fg-0); font-family: var(--font-body); font-size: 15px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    outline: none; transition: border-color 240ms, box-shadow 240ms;
+  }
+  .input::placeholder { color: var(--fg-2); }
+  .input.focus { border-color: rgba(94,231,255,0.5); box-shadow: inset 0 1px 0 rgba(255,255,255,0.03), 0 0 0 4px rgba(94,231,255,0.1); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .select { display: flex; align-items: center; justify-content: space-between; }
+  .chev { color: var(--fg-2); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="field"><div class="lbl">Full Name</div><input class="input" placeholder="Jane Cooper"></div>
+    <div class="field"><div class="lbl">Email</div><input class="input focus" placeholder="jane@brokerage.com"></div>
+  </div>
+  <div class="row">
+    <div class="field"><div class="lbl">Monthly Lead Volume</div>
+      <div class="input select"><span style="color:var(--fg-0)">500 – 2,000</span>
+        <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </div>
+    <div class="field"><div class="lbl">Phone</div><input class="input" placeholder="+1 (555) 000-0000"></div>
+  </div>
+</body>
+</html>

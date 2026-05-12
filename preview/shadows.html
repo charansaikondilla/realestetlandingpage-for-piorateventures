@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-0); }
+  body { padding: 32px; font-family: var(--font-body); color: var(--fg-1); display: flex; gap: 28px; align-items: center; justify-content: space-around; }
+  .item { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+  .demo { width: 130px; height: 100px; background: var(--bg-2); border-radius: 12px; border: 1px solid var(--line-1); }
+  .demo.card { box-shadow: var(--shadow-card); }
+  .demo.glow { box-shadow: var(--shadow-glow); border-color: rgba(94,231,255,0.4); }
+  .demo.deep { box-shadow: var(--shadow-deep); }
+  .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--fg-2); }
+  .name { font-size: 12px; color: var(--fg-0); }
+</style>
+</head>
+<body>
+  <div class="item">
+    <div class="demo card"></div>
+    <div class="lbl">shadow-card</div>
+    <div class="name">Default elevation</div>
+  </div>
+  <div class="item">
+    <div class="demo glow"></div>
+    <div class="lbl">shadow-glow</div>
+    <div class="name">CTA / live state</div>
+  </div>
+  <div class="item">
+    <div class="demo deep"></div>
+    <div class="lbl">shadow-deep</div>
+    <div class="name">Hero lift</div>
+  </div>
+</body>
+</html>

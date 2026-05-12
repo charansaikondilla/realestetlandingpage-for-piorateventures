@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--bg-0); }
+  body { padding: 28px; font-family: var(--font-body); display: flex; gap: 18px; align-items: stretch; }
+  .col { flex: 1; padding: 22px; border-radius: 16px; }
+  .before {
+    background: rgba(255,180,84,0.04);
+    border: 1px solid rgba(255,180,84,0.2);
+  }
+  .after {
+    background: rgba(94,231,255,0.04);
+    border: 1px solid rgba(94,231,255,0.25);
+    box-shadow: 0 0 60px -20px rgba(94,231,255,0.3);
+  }
+  .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 14px; }
+  .before .lbl { color: var(--warn); }
+  .after .lbl { color: var(--accent); }
+  ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--fg-1); }
+  li svg { flex-shrink: 0; }
+  .before li svg { color: var(--warn); opacity: 0.7; }
+  .after li svg { color: #5BE5AC; }
+</style>
+</head>
+<body>
+  <div class="col before">
+    <div class="lbl">// Before automation</div>
+    <ul>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Slow lead replies</li>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Missed inquiries</li>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Manual follow-ups</li>
+    </ul>
+  </div>
+  <div class="col after">
+    <div class="lbl">// With Piorate</div>
+    <ul>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Instant AI responses</li>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Automated nurturing</li>
+      <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Faster appointments</li>
+    </ul>
+  </div>
+</body>
+</html>
