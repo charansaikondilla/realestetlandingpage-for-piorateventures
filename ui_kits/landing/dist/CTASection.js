@@ -47,7 +47,17 @@ const CTASection = () => {
     backgroundSize: "48px 48px",
     maskImage: "radial-gradient(ellipse 60% 80% at 50% 50%, black 30%, transparent 80%)",
     WebkitMaskImage: "radial-gradient(ellipse 60% 80% at 50% 50%, black 30%, transparent 80%)"
-  } }), /* @__PURE__ */ React.createElement("div", { style: { position: "relative" } }, /* @__PURE__ */ React.createElement(Eyebrow, { style: { marginBottom: 18 } }, "// Next step"), /* @__PURE__ */ React.createElement("h2", { style: { fontSize: "clamp(36px, 4.4vw, 56px)", marginBottom: 16, maxWidth: 720, marginLeft: "auto", marginRight: "auto" } }, "Ready To Automate Your Real Estate Business?"), /* @__PURE__ */ React.createElement("p", { className: "lead", style: { marginBottom: 36, maxWidth: 560, marginLeft: "auto", marginRight: "auto" } }, "Stop wasting time on repetitive work and start scaling with AI-powered systems built for closers."), /* @__PURE__ */ React.createElement(Button, { variant: "primary", size: "lg", icon: /* @__PURE__ */ React.createElement(ArrowIcon, null) }, "Book Your Free Strategy Call"))), /* @__PURE__ */ React.createElement("div", { className: "contact-form-grid", style: {
+  } }), /* @__PURE__ */ React.createElement("div", { style: { position: "relative" } }, /* @__PURE__ */ React.createElement(Eyebrow, { style: { marginBottom: 18 } }, "// Next step"), /* @__PURE__ */ React.createElement("h2", { style: { fontSize: "clamp(36px, 4.4vw, 56px)", marginBottom: 16, maxWidth: 720, marginLeft: "auto", marginRight: "auto" } }, "Ready To Automate Your Real Estate Business?"), /* @__PURE__ */ React.createElement("p", { className: "lead", style: { marginBottom: 36, maxWidth: 560, marginLeft: "auto", marginRight: "auto" } }, "Stop wasting time on repetitive work and start scaling with AI-powered systems built for closers."), /* @__PURE__ */ React.createElement(
+    Button,
+    {
+      variant: "primary",
+      size: "lg",
+      icon: /* @__PURE__ */ React.createElement(ArrowIcon, null),
+      onClick: () => window.open("https://calendly.com/charansaikondilla/30min", "_blank"),
+      style: { cursor: "pointer" }
+    },
+    "Book Your Free Strategy Call"
+  ))), /* @__PURE__ */ React.createElement("div", { className: "contact-form-grid", style: {
     display: "grid",
     gridTemplateColumns: "1fr 1.4fr",
     gap: 64,
@@ -169,7 +179,19 @@ const CTASection = () => {
       alignItems: "center",
       justifyContent: "space-between",
       marginTop: 8
-    } }, /* @__PURE__ */ React.createElement("span", { className: "caption" }, "We respond within 1 business day."), /* @__PURE__ */ React.createElement(Button, { variant: "primary", size: "md", icon: /* @__PURE__ */ React.createElement(ArrowIcon, null) }, "Book My Free Call"))
+    } }, /* @__PURE__ */ React.createElement("span", { className: "caption" }, "We respond within 1 business day."), /* @__PURE__ */ React.createElement(
+      Button,
+      {
+        variant: "primary",
+        size: "md",
+        icon: /* @__PURE__ */ React.createElement(ArrowIcon, null),
+        onClick: () => {
+          window.open("https://calendly.com/charansaikondilla/30min", "_blank");
+          setSubmitted(true);
+        }
+      },
+      "Book My Free Call"
+    ))
   )))));
 };
 window.CTASection = CTASection;

@@ -57,7 +57,13 @@ const CTASection = () => {
               Stop wasting time on repetitive work and start scaling with
               AI-powered systems built for closers.
             </p>
-            <Button variant="primary" size="lg" icon={<ArrowIcon />}>
+            <Button 
+              variant="primary" 
+              size="lg" 
+              icon={<ArrowIcon />}
+              onClick={() => window.open('https://calendly.com/charansaikondilla/30min', '_blank')}
+              style={{ cursor: 'pointer' }}
+            >
               Book Your Free Strategy Call
             </Button>
           </div>
@@ -185,7 +191,15 @@ const CTASection = () => {
                 <div style={{ gridColumn: '1 / -1', display: 'flex', alignItems: 'center',
                   justifyContent: 'space-between', marginTop: 8 }}>
                   <span className="caption">We respond within 1 business day.</span>
-                  <Button variant="primary" size="md" icon={<ArrowIcon />}>
+                  <Button 
+                    variant="primary" 
+                    size="md" 
+                    icon={<ArrowIcon />}
+                    onClick={() => {
+                      window.open('https://calendly.com/charansaikondilla/30min', '_blank');
+                      setSubmitted(true);
+                    }}
+                  >
                     Book My Free Call
                   </Button>
                 </div>

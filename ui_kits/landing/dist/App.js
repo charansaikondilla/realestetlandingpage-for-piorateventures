@@ -9,7 +9,8 @@ const App = () => {
   const Testimonials = window.Testimonials;
   const CTASection = window.CTASection;
   const Footer = window.Footer;
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Header, null), /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement(Hero, null), /* @__PURE__ */ React.createElement(Services, null), /* @__PURE__ */ React.createElement(WhyUs, null), /* @__PURE__ */ React.createElement(HowItWorks, null), /* @__PURE__ */ React.createElement(Results, null), /* @__PURE__ */ React.createElement(Testimonials, null), /* @__PURE__ */ React.createElement(CTASection, null)), /* @__PURE__ */ React.createElement(Footer, null));
+  const CalendlyPopup = window.CalendlyPopup;
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(CalendlyPopup, null), /* @__PURE__ */ React.createElement(Header, null), /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement(Hero, null), /* @__PURE__ */ React.createElement(Services, null), /* @__PURE__ */ React.createElement(WhyUs, null), /* @__PURE__ */ React.createElement(HowItWorks, null), /* @__PURE__ */ React.createElement(Results, null), /* @__PURE__ */ React.createElement(Testimonials, null), /* @__PURE__ */ React.createElement(CTASection, null)), /* @__PURE__ */ React.createElement(Footer, null));
 };
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(/* @__PURE__ */ React.createElement(App, null));

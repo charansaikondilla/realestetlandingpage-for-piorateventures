@@ -327,7 +327,7 @@ const Hero = () => {
 
         {/* CTA BUTTON */}
         <div className="desktop-btn-wrap" style={{ textAlign: 'center' }}>
-           <a href="#book" className="prime-btn">Book Your Automation Call</a>
+           <a href="https://calendly.com/charansaikondilla/30min" target="_blank" rel="noopener noreferrer" className="prime-btn" style={{ textDecoration: 'none' }}>Book Your Automation Call</a>
            <div style={{ marginTop: "30px", display: "flex", justifyContent: "center", gap: "24px", opacity: 0.4, fontWeight: 800, fontSize: "10px", letterSpacing: "2px", color: "#000", flexWrap: "wrap" }}>
               <span>AI VOICE</span>   <span>WHATSAPP</span>   <span>DM AUTOMATION</span>
            </div>

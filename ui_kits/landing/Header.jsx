@@ -155,7 +155,9 @@ const Header = () => {
           </a>
 
           <a
-            href="#book"
+            href="https://calendly.com/charansaikondilla/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="desktop-nav"
             style={{
               backgroundColor: '#3897f0',
@@ -169,6 +171,18 @@ const Header = () => {
               alignItems: 'center',
               gap: '8px',
               boxShadow: '0 10px 20px rgba(56, 151, 240, 0.2)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = '#0E76DE';
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 14px 28px rgba(56, 151, 240, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = '#3897f0';
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 10px 20px rgba(56, 151, 240, 0.2)';
             }}
           >
             Book a Call

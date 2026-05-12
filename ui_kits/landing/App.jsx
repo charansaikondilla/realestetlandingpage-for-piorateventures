@@ -10,9 +10,11 @@ const App = () => {
   const Testimonials = window.Testimonials;
   const CTASection = window.CTASection;
   const Footer = window.Footer;
+  const CalendlyPopup = window.CalendlyPopup;
 
   return (
     <>
+      <CalendlyPopup />
       <Header />
       <main>
         <Hero />
