@@ -7,6 +7,7 @@ const distDir = path.join(landingDir, 'dist');
 
 const sources = [
   'Primitives.jsx',
+  'CalendlyPopup.jsx',
   'Header.jsx',
   'Hero.jsx',
   'Services.jsx',
